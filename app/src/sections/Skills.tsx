@@ -139,7 +139,7 @@ function Skills() {
 
     return (
         <div>
-            <Typography variant={"h4"} paddingTop={10} paddingBottom={3} fontFamily={"montserrat subrayada"}>My
+            <Typography variant={"h4"} paddingTop={10} paddingBottom={3} fontFamily={"montserrat subrayada"}>
                 Technical Experience</Typography>
             <Typography variant={"h5"} padding={3}>Frontend Experience</Typography>
             <Grid container>

@@ -12,7 +12,7 @@ function Blog() {
         <div>
             <Typography variant={"h4"} padding={5} color={"whitesmoke"} fontFamily={"montserrat subrayada"}
                         sx={{textShadow: "2px 2px 4px #000000"}}>More than a Developer</Typography>
-            <Stack direction="row" spacing={5} sx={{
+            <Stack direction={{xs:"column", md:"row"}} spacing={5} sx={{
                 display: "flex",
                 textAlign: "center",
                 justifyContent: "center",

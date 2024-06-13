@@ -1,5 +1,5 @@
 import React from 'react';
-import {Paper, Stack, Typography} from "@mui/material";
+import {Grid, Paper, Typography} from "@mui/material";
 // @ts-ignore
 import img1 from "../resources/Screenshot 2024-06-10 195213.png";
 
@@ -10,12 +10,12 @@ function HobbyProject() {
                 Project</Typography>
 
             <Paper>
-                <Stack flexDirection={"row"} sx={{
+                <Grid container direction={{xs:"column", md:"row"}} sx={{
                     display: "flex",
                 }}>
-                    <Stack padding={5} marginTop={10} width={"50%"} alignItems={"center"}>
-                        <img src={img1} width={"300px"} alt={"The Creative Bird dashboard"}/></Stack>
-                    <Stack flexDirection={"column"} padding={4} width={"50%"} sx={{
+                    <Grid item padding={5} alignItems={"center"} md={6}>
+                        <img src={img1} width={"100%"} alt={"The Creative Bird dashboard"}/></Grid>
+                    <Grid item container direction={"column"} padding={4} md={6} sx={{
                         display: "flex",
                     }}>
                         <Typography variant={"h5"} padding={2}>The Creative Bird</Typography>
@@ -29,8 +29,8 @@ function HobbyProject() {
                             the artistic person in me while exploring the new tech. </Typography>
                         <Typography paragraph padding={2}>www.thecreativebird.site</Typography>
                         <Typography variant={"h6"} padding={2}>Coming soon..</Typography>
-                    </Stack>
-                </Stack>
+                    </Grid>
+                </Grid>
             </Paper>
         </div>
     );

@@ -1,5 +1,5 @@
 import React from 'react';
-import {List, ListItem, Paper, Stack, Typography} from "@mui/material";
+import {Grid, List, ListItem, Paper, Stack, Typography} from "@mui/material";
 // @ts-ignore
 import img1 from "../resources/a7fd41dde51576ef.png";
 // @ts-ignore
@@ -12,20 +12,20 @@ import img4 from "../resources/logoer-gsp-abb300x300.jpg";
 function Projects() {
     return (
         <div>
-            <Typography variant={"h4"} padding={2} fontFamily={"montserrat subrayada"}>Projects</Typography>
-            <Stack spacing={5} marginX={10} sx={{
+            <Typography variant={"h4"} paddingTop={10} fontFamily={"montserrat subrayada"}>Projects</Typography>
+            <Stack spacing={5} padding={5} sx={{
                 display: "flex",
                 textAlign: "center",
                 justifyContent: "center",
                 alignItems: "center",
             }}>
-                <Paper sx={{width: "100%"}}>
-                    <Stack flexDirection={"row"} sx={{
-                        display: "flex",
+                <Paper sx={{width: "100%",height: "100%"}} >
+                    <Grid container direction={{xs:"column", md:"row"}} spacing={1} padding={5} sx={{
+                        display: "flex",height: "100%"
                     }}>
-                        <Stack padding={5} marginTop={10} width={"50%"} alignItems={"center"}>
-                            <img src={img1} width={"300px"} alt={"TurtleSec AS"}/></Stack>
-                        <Stack flexDirection={"column"} padding={4} width={"50%"} sx={{
+                        <Grid item md={6}  alignItems={"center"}>
+                            <img src={img1} height={"100%"} alt={"TurtleSec AS"}/></Grid>
+                        <Grid item container md={6} direction={"column"} sx={{
                             display: "flex",
                         }}>
                             <Typography variant={"h5"} padding={2}>Turtle Trace</Typography>
@@ -41,14 +41,14 @@ function Projects() {
                                     CSS, Storybook, Figma, HTML, CSS, TypeScript, D3, Kotlin, SpringBoot, Maven,
                                     PostgreSQL, Kafka, Kubernetes, GitHub, GitHub Actions, Okta OAuth 2.0</ListItem>
                             </List>
-                        </Stack>
-                    </Stack>
+                        </Grid>
+                    </Grid>
                 </Paper>
-                <Paper sx={{width: "100%"}}>
-                    <Stack flexDirection={"row"} sx={{
+                <Paper sx={{width: "100%",height: "100%"}}>
+                    <Grid container direction={{xs:"column-reverse", md:"row"}} padding={5} sx={{
                         display: "flex",
                     }}>
-                        <Stack flexDirection={"column"} padding={4} width={"50%"} sx={{
+                        <Grid item container md={6} direction={"column"} sx={{
                             display: "flex",
                         }}>
                             <Typography variant={"h5"} padding={2}>Brain Base</Typography>
@@ -62,19 +62,18 @@ function Projects() {
                                     Tailwind CSS, Vercel, Firebase, GitHub, GitHub Actions, Headless
                                     CMS(Prismic)</ListItem>
                             </List>
-                        </Stack>
-                        <Stack width={"50%"} marginTop={10} alignItems={"center"}> <img src={img2}
-                                                                                        width={"300px"} alt={"Brainbase AS"}/></Stack>
-
-                    </Stack>
+                        </Grid>
+                        <Grid item md={6} marginTop={5} alignItems={"center"}> <img src={img2}
+                                                                                        height={"100%"} alt={"Brainbase AS"}/></Grid>
+                    </Grid>
                 </Paper>
-                <Paper>
-                    <Stack flexDirection={"row"} sx={{
+                <Paper sx={{width: "100%",height: "100%"}}>
+                    <Grid container direction={{xs:"column", md:"row"}} padding={5} sx={{
                         display: "flex",
                     }}>
-                        <Stack padding={5} marginTop={10} width={"50%"} alignItems={"center"}> <img src={img3} alt={"ING"}
-                                                                                                    width={"300px"}/></Stack>
-                        <Stack flexDirection={"column"} padding={4} width={"50%"} sx={{
+                        <Grid item marginTop={5} alignItems={"center"} md={6}> <img src={img3} alt={"ING"}
+                                                                                                    width={"80%"}/></Grid>
+                        <Grid container item direction={"column"} md={6} sx={{
                             display: "flex",
                         }}>
                             <Typography variant={"h5"} padding={2}>Credit Risk Approval Package (ING Bank
@@ -90,14 +89,14 @@ function Projects() {
                                     HTML, CSS, Java, Spring, Maven, Gitlab, Azure, REST, CheckMarx, Servlets, Oracle,
                                     WebSphere</ListItem>
                             </List>
-                        </Stack>
-                    </Stack>
+                        </Grid>
+                    </Grid>
                 </Paper>
-                <Paper>
-                    <Stack flexDirection={"row"} sx={{
+                <Paper sx={{width: "100%",height: "100%"}}>
+                    <Grid container direction={{xs:"column-reverse", md:"row"}} padding={5} sx={{
                         display: "flex",
                     }}>
-                        <Stack flexDirection={"column"} padding={4} width={"50%"} sx={{
+                        <Grid item container direction={"column"} md={6} sx={{
                             display: "flex",
                         }}>
                             <Typography variant={"h5"} padding={2}>Control System Sales Configurator-IACTPG (ABB
@@ -112,10 +111,10 @@ function Projects() {
                                 <ListItem sx={{display: 'list-item'}}>Tech: JavaScript, HTML, CSS, Bootstrap, Java,
                                     Spring, Maven, Hibernate, REST, SQL Server, Apache Tomcat, SonarQube</ListItem>
                             </List>
-                        </Stack>
-                        <Stack width={"50%"} marginTop={10} alignItems={"center"}> <img src={img4} alt={"ABB"}
-                                                                                        width={"300px"}/></Stack>
-                    </Stack>
+                        </Grid>
+                        <Grid item md={6} marginTop={5} alignItems={"center"}> <img src={img4} alt={"ABB"}
+                                                                                        width={"100%"}/></Grid>
+                    </Grid>
                 </Paper>
             </Stack>
         </div>
