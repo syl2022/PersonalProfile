@@ -16,6 +16,14 @@ function Skills() {
             title: 'ReactJS',
         },
         {
+            img: 'skills/react-threejsfiber.png',
+            title: 'r3f',
+        },
+        {
+            img: 'skills/threejs.png',
+            title: 'threejs',
+        },
+        {
             img: 'skills/1__6ooq0R60ba3UT5c-QVemA.png',
             title: 'Tailwind CSS',
         },
