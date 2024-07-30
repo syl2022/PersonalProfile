@@ -15,7 +15,7 @@ const { SitemapStream, streamToPromise } = require('sitemap');
     ];
 
     const sitemap = new SitemapStream({ hostname });
-    const writeStream = fs.createWriteStream(path.resolve(__dirname, '../../public/sitemap.xml'));
+    const writeStream = fs.createWriteStream(path.resolve(__dirname, './app/public/sitemap.xml'));
 
     urls.forEach(route => {
         sitemap.write(route);
@@ -27,5 +27,5 @@ const { SitemapStream, streamToPromise } = require('sitemap');
     writeStream.write(sitemapOutput);
     writeStream.end();
 
-    console.log('Sitemap generated at public/sitemap.xml');
+    console.log('Sitemap generated at '+ writeStream.url);
 })();
