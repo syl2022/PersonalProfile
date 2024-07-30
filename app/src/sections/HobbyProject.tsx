@@ -14,7 +14,7 @@ function HobbyProject() {
                     display: "flex",
                 }}>
                     <Grid item padding={5} alignItems={"center"} md={6}>
-                        <iframe src="https://reactthreefiber.onrender.com/" width="100%" height="300">
+                        <iframe title={"threejs-fiber"} src="https://reactthreefiber.onrender.com/" width="100%" height="300">
                             <p>Your browser does not support iframes.</p>
                         </iframe>
                     </Grid>
